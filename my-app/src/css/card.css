@@ -1,0 +1,41 @@
+
+.card{
+    height: 150px;
+    width: 300px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.card img {
+    height:60%;
+    max-width: 60%;
+    object-fit: cover;
+    align-content: center;
+}
+
+.card .pokemonName{
+    text-transform: capitalize;
+}
+.media {
+    background-color: white;
+    position: relative;
+    opacity: 0.6;
+    border: none;
+}
+.pokemon-id {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+.contenido {
+    opacity: 0.8;
+    background-color: black;
+}
+.card {
+    border: none;
+}
