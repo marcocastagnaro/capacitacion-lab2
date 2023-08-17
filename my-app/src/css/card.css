@@ -1,6 +1,6 @@
 
 .card{
-    height: 150px;
+    height: 400px;
     width: 300px;
     margin-left: 30px;
     margin-bottom: 60px;
@@ -8,10 +8,12 @@
 }
 
 .card img {
-    height:60%;
+    height:50%;
     max-width: 60%;
     object-fit: cover;
     align-content: center;
+    opacity: 1;
+    margin-left: 70px;
 }
 
 .card .pokemonName{
@@ -20,7 +22,7 @@
 .media {
     background-color: white;
     position: relative;
-    opacity: 0.6;
+    opacity: 0.8;
     border: none;
 }
 .pokemon-id {

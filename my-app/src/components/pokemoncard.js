@@ -29,11 +29,7 @@ function PokemonCard ({ pokemonData }){
 
     const typesJSX = types.map((type, index) => (
         <React.Fragment key={index}>
-    <span
-        style={{
-            justifyContent: 'center',boxShadow: `0 2px 4px rgba(0, 0, 0, 0.2)`, backgroundColor: typeColors[type.type.name], color: 'white', padding: '5px', borderRadius: '5px', textTransform: 'capitalize', // Para capitalizar la primera letramarginRight: '5px', // Añadir margen derecho para separar los tipos
-        }}
-    >
+    <span style={{justifyContent: 'center',boxShadow: `0 2px 4px rgba(0, 0, 0, 0.2)`, backgroundColor: typeColors[type.type.name], color: 'white', padding: '5px', borderRadius: '5px', textTransform: 'capitalize', marginRight: '5px'}}>
   {type.type.name}
 </span>
             {index < types.length - 1 && ' '}
@@ -45,7 +41,7 @@ function PokemonCard ({ pokemonData }){
 
     return (
         <div className="card">
-        <Card sx={{ maxWidth: 345}} style={{borderRadius: '12px', backgroundColor:'rgba(0,0,0,0'}}>
+        <Card sx={{ maxWidth: 345}} style={{borderRadius: '1px', backgroundColor:'rgba(0,0,0,0'}}>
             <div className="media" onClick={redirectToDetails} style = {{cursor: 'pointer'}}>
                     <CardMedia component="img" height="140" image={sprites.front_default} alt={name}/>
                 <div className="pokemon-id">{id}</div>

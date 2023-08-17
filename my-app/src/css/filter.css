@@ -1,7 +1,6 @@
 .filter-select {
-    margin-top: 20px;
-    margin-left: 300px;
+    margin-top: 40px;
     display: flex;
-    width: 30%;
     height: 30px;
+    margin-left: 40px;
 }

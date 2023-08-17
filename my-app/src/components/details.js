@@ -32,7 +32,8 @@ function DetailPok({ pokemonData }) {
             color: 'white',
             padding: '5px',
             borderRadius: '5px',
-            textTransform: 'capitalize', // Para capitalizar la primera letramarginRight: '5px', // Añadir margen derecho para separar los tipos
+            textTransform: 'capitalize',
+            marginRight: '5px',
         }}
     >
   {type.type.name}
@@ -43,21 +44,25 @@ function DetailPok({ pokemonData }) {
 
     return (
         <div className='detail-container'>
-            <div className='title'>
-                <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
+            <div className= 'header'>
+                <h1>
+                    Pokedex
+                </h1>
             </div>
             <div className="carta">
-                <Card sx={{ display: 'flex' }} style={{ backgroundColor: 'transparent' }}>
+                <Card sx={{ display: 'flex' }} style={{ backgroundColor: 'black', borderRadius: '12px', width: '700px'}}>
                     <div style={{ flex: 1 }}>
                         <CardMedia
                             component="img"
                             height="240"
                             image={sprites.front_default}
                             alt={name}
-                            style={{ flex: 1 }}
                         />
                         <div style={{ padding: '10px', marginLeft:'80px'}}>
                             <CardContent>
+                                <Typography style = {{color: 'white', marginTop: '20px'}}>
+                                    <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
+                                </Typography>
                                 <Typography variant="body1" color="text.secondary">
                                     {typesJSX}
                                 </Typography>
@@ -65,30 +70,32 @@ function DetailPok({ pokemonData }) {
                         </div>
                         <div className = 'caract'>
                             <CardContent>
-                                <Typography style={ {color: 'white'}}>
-                                    Height: {height} m
-                                    Weight: {weight} kg
-                                    Exp: {base_experience} exp
+                                <Typography style={{ opacity:'1',fontWeight: 'bold',marginLeft: '20%' , color: 'yellow', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                        <span>Height</span>
+                                        <span>{height}m</span>
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                        <span>Weight</span>
+                                        <span>{weight}kg</span>
+                                    </div>
+                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                        <span>Exp</span>
+                                        <span>{base_experience} exp</span>
+                                    </div>
                                 </Typography>
                             </CardContent>
                         </div>
                     </div>
-                    <div style={{ flex: 1, padding: '10px' }}>
+                    <div style={{padding: '10px', opacity: '1' }}>
                         <CardContent>
-                            <Typography variant="body1" color="text.secondary" style={{ color: 'white' }}>
+                            <Typography variant="body1" color="text.secondary" style={{ color: 'yellow', fontSize: '20px'}}>
                                 Statistics:
                             </Typography>
                             {stats.map(stat => (
                                 <div
                                     key={stat.stat.name}
-                                    style={{
-                                        marginBottom: '10px',
-                                        backgroundColor: 'lightgray',
-                                        padding: '10px',
-                                        borderRadius: '10px',
-                                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                                        border: '1px solid gray'
-                                    }}
+                                    style={{marginBottom: '10px', marginTop: '20px', backgroundColor: 'lightblue', padding: '10px', borderRadius: '10px', boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)', border: '1px solid gray', width: `${stat.base_stat + 50}px`}}
                                 >
                                     <Typography variant="body2" color="text.primary">
                                         {stat.stat.name}: {stat.base_stat}
