@@ -50,7 +50,7 @@ function Evolution({ pokemonData }) {
     }, [pokemonData]);
 
     return (
-        <div style={{ marginTop: '-100px', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '25px' }}>
+        <div style={{ marginTop: '-100px', marginBottom: '50px', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '25px' }}>
             <h2 style={{ color: 'white', textAlign: 'center', textDecoration: 'underline'}}>Evolutions</h2>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '20px' }}>
                 {evolutions.map((evolution) => (
