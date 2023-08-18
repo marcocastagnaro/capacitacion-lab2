@@ -31,7 +31,7 @@ function PokemonCard ({ pokemonData }){
         <React.Fragment key={index}>
     <span
         style={{
-            justifyContent: 'center',boxShadow: `0 2px 4px rgba(0, 0, 0, 0.2)`, backgroundColor: typeColors[type.type.name], color: 'white', padding: '5px', borderRadius: '5px', textTransform: 'capitalize', // Para capitalizar la primera letramarginRight: '5px', // Añadir margen derecho para separar los tipos
+            justifyContent: 'center',boxShadow: `0 2px 4px rgba(0, 0, 0, 0.2)`, backgroundColor: typeColors[type.type.name], color: 'white', padding: '5px', borderRadius: '5px', textTransform: 'capitalize',
         }}
     >
   {type.type.name}

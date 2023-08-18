@@ -50,7 +50,7 @@ function DetailPok({ pokemonData }) {
                 </h1>
             </div>
             <div className="carta">
-                <Card sx={{ display: 'flex' }} style={{ backgroundColor: 'black', borderRadius: '12px',height: '500px', width: '1200px'}}>
+                <Card sx={{ display: 'flex' }} style={{ backgroundColor: 'black', borderRadius: '12px'}}>
                     <div style={{ flex: 1 }}>
                         <CardMedia
                             component="img"
@@ -70,7 +70,7 @@ function DetailPok({ pokemonData }) {
                         </div>
                         <div className = 'caract'>
                             <CardContent>
-                                <Typography style={{ opacity:'1',fontWeight: 'bold',marginLeft: '20%' , color: 'yellow', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+                                <Typography style={{ opacity:'1',fontWeight: 'bold',marginLeft: '80px' , color: 'yellow', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
                                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                         <span>Height</span>
                                         <span>{height}m</span>
